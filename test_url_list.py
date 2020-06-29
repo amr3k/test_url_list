@@ -37,7 +37,7 @@ if __name__ == "__main__":
         import asyncio
         import aiohttp
         from aiohttp import ClientSession, ClientConnectorError, InvalidURL
-    except ModuleNotFoundError:
+    except (ModuleNotFoundError, NameError):
         print("Please install missing modules with `pip install -r requirements.txt`")
     try:
         assert sys.version_info >= (3, 7)
